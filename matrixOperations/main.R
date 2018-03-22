@@ -32,23 +32,47 @@ mainFunc <- function(matrix1,matrix2) {
   }
   
   while (TRUE) {
-    print("==========")
-    print("(1) Add")
-    print("(2) Subtract")
+    cat("\014")
+    
+    cat("
+Matrix 1
+================
+")
+    print(M1)
+    cat("
+Matrix 2
+================
+")
+    print(M2)
+    
+    
+    cat("
+================
+CHOICES:
+(1) Add
+(2) Subtract
+")
     answer <- readline("Choice:")
     
     if (answer == 1){
-      print("Result: Add")
-      print("===========")
-      
+      cat("
+Result: Add
+===============
+")
       print(add(M1,M2))
-    } else if (answer == 2){
-      print("Result: Subtract")
-      print("===========")
       
+    } else if (answer == 2){
+      cat("
+Result: Subtract
+================
+")
       print(subtract(M1,M2))
     }
     
+    readline("Press enter to continue...")
+    
   }
-}
+  }
 mainFunc()
+
+cat("123\n456")
